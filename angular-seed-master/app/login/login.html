@@ -1,0 +1,26 @@
+<html ng-app="MyApp" ng-controller="HomeController">
+
+
+
+<input type="button" value="SHOW LOGIN FORM" ng-click="formShow()">
+<br></br>
+
+
+
+
+
+<br></br>
+<div data-ng-show = "showformValue">
+<h1>Login Form<h1><h4></h4><br>
+Name:<input type="text" name="name" ng-model="loginObj.sname"><br>
+Password:<input type="text" name="psword" ng-model="loginObj.password"><br>
+<input type="button" value="Login" ng-click="login()">
+<input type="button" value="GO BACK"/><br> 
+
+</h1>
+</h1>
+</div>
+<p>Get values</p>
+Name:{{loginObj.sname}}<br>
+Password:{{loginObj.password}}
+<p > killelr fofoffofofo</p>

@@ -1,0 +1,17 @@
+
+
+<div ng-show="topview">
+	<input type="button" value="Enter Login Page" ng-click="open()"/>
+</div>
+
+<div data-ng-show = "view">
+	<h1>Login Page</h1>
+	Name<input type="text" ng-model="name" name="tname"/>
+	Password<input type="password" ng-model="pass" name="tpass"/><br>
+	<input type="button" value="Login" ng-click="send()"/>
+	<input type="button" value="Cancel" ng-click="back()"/>
+</div>
+<div ng-show="lst">
+	Name:{{name}}<br>
+	Password:{{pass}}
+</div>
