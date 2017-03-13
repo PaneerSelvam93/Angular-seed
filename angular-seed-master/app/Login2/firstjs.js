@@ -8,6 +8,7 @@ angular.module('myApp.firstjs', ['ngRoute'])
 }])
 
 .controller('locont', function($scope) {
+  
   $scope.view=false;
   $scope.topview=true;
   $scope.lst=false;

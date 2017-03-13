@@ -1,0 +1,36 @@
+<input type="text" ng-model="fname" placeholder ="Type in lowercase">{{fname|uppercase}}<br>
+<input type="text" ng-model="lname" placeholder ="Type in uppercase">{{lname|lowercase}}<br>
+<p>Looping with objects:</p>
+<ul>
+  <li ng-repeat="x in names | orderBy:'names'">
+    {{ x.name + ', ' + x.country }}
+  </li>
+</ul><br>
+<input type="text" ng-model="currency">Currency fillter: {{currency | currency}}<br>
+
+
+<ul>
+  <li ng-repeat="x in namess ">
+    {{ x }}
+  </li>
+</ul><br>
+fillter by letters: i
+<ul>
+  <li ng-repeat="x in namess | filter : 'i'">
+    {{ x }}
+  </li>
+</ul><br>
+<p><input type="text" ng-model="tet"></p>
+
+<ul>
+  <li ng-repeat="x in namess | filter:tet">
+    {{ x }}
+  </li>
+</ul><br>
+
+custom fillter:
+<li ng-repeat="x in namess">
+    {{x | myFormat}}
+</li>
+</ul>
+ 

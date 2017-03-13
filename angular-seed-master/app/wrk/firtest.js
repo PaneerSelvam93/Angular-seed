@@ -8,5 +8,11 @@ angular.module('myApp.firtest', ['ngRoute'])
 }])
 
 .controller('HomeController', function($scope) {
-  $scope.message = 'Hello from HomeController';
+ // $scope.linkg='This is '+''+'<a href="#">Google</a>';
+ $scope.count=0;
+ //$scope.linkg ='I am an <code>HTML</code>string with <a href="#">links!</a> and other <em>stuff</em>';
+
+    $scope.callchange = function() {
+        $scope.count++;
+      };
 });

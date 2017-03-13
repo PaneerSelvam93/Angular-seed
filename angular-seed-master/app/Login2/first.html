@@ -6,12 +6,14 @@
 
 <div data-ng-show = "view">
 	<h1>Login Page</h1>
-	Name<input type="text" ng-model="name" name="tname"/>
-	Password<input type="password" ng-model="pass" name="tpass"/><br>
-	<input type="button" value="Login" ng-click="send()"/>
-	<input type="button" value="Cancel" ng-click="back()"/>
+	Name<input type="text" class="form-control" ng-model="name" name="tname"/>
+	Password<input type="password" class="form-control" ng-model="pass" name="tpass"/><br>
+	<button type="button"  class="btn btn-success" ng-click="send()">Send</button>
+	<button type="button" class="btn btn-primary" ng-click="back()">cancel</button>
+
 </div>
 <div ng-show="lst">
 	Name:{{name}}<br>
 	Password:{{pass}}
 </div>
+
