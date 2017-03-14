@@ -1,0 +1,143 @@
+<div class="container">
+<div class="well well-lg">
+<div class="col-xs-2">
+<input type="text" placeholder="Search By Name" class="form-control" ng-model="byname"></div>
+ <div class="col-xs-2">
+<input type="text" placeholder="Search By Id" class="form-control" ng-model="byid"></div>  
+<div class="col-xs-2">
+<input type="text" placeholder="Search By Age" class="form-control" ng-model="byage"></div>
+<div class="col-xs-2">
+<input type="text" placeholder="Search By Address" class="form-control" ng-model="byaddress"></div>
+<div class="col-xs-2">
+<input type="text" placeholder="Search By Anything" class="form-control" ng-model="byanything"></div>
+
+
+
+    <table class="table table-striped" ng-show="byname">
+     </thead>
+      <tr>
+        <th>NAME</th>
+        <th>ID</th>
+        <th>AGE</th>
+        <th>ADDRESS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="x in students | filter : byname" >
+        <td>{{x.sname}}</td>
+        <td>{{x.sid}}</td>
+        <td>{{x.sage}}</td>
+        <td>{{x.saddress}}</td>
+        <td><input type="button" value="Delete" class="btn btn-danger" ng-click="del($index)"></td>
+      </tr>
+ 	</tbody>
+</table>
+
+<table class="table table-striped" ng-show="byid">
+     </thead>
+      <tr>
+        <th>NAME</th>
+        <th>ID</th>
+        <th>AGE</th>
+        <th>ADDRESS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="x in students | filter : byid" >
+        <td>{{x.sname}}</td>
+        <td>{{x.sid}}</td>
+        <td>{{x.sage}}</td>
+        <td>{{x.saddress}}</td>
+        <td><input type="button" value="Delete" class="btn btn-danger" ng-click="del()"></td>
+      </tr>
+ 	</tbody>
+</table>
+
+<table class="table table-striped" ng-show="byage">
+     </thead>
+      <tr>
+        <th>NAME</th>
+        <th>ID</th>
+        <th>AGE</th>
+        <th>ADDRESS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="x in students | filter : byage">
+        <td>{{x.sname}}</td>
+        <td>{{x.sid}}</td>
+        <td>{{x.sage}}</td>
+        <td>{{x.saddress}}</td>
+        <td><input type="button" value="Delete" class="btn btn-danger" ng-click="del()"></td>
+      </tr>
+ 	</tbody>
+</table>
+
+<table class="table table-striped" ng-show="byaddress">
+     </thead>
+      <tr>
+        <th>NAME</th>
+        <th>ID</th>
+        <th>AGE</th>
+        <th>ADDRESS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="x in students | filter : byaddress">
+        <td>{{x.sname}}</td>
+        <td>{{x.sid}}</td>
+        <td>{{x.sage}}</td>
+        <td>{{x.saddress}}</td>
+        <td><input type="button" value="Delete" class="btn btn-danger" ng-click="del()"></td>
+      </tr>
+ 	</tbody>
+</table>
+
+
+<table class="table table-striped" ng-show="byanything">
+     </thead>
+      <tr>
+        <th>NAME</th>
+        <th>ID</th>
+        <th>AGE</th>
+        <th>ADDRESS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="x in students | filter : byanything" >
+        <td>{{x.sname}}</td>
+        <td>{{x.sid}}</td>
+        <td>{{x.sage}}</td>
+        <td>{{x.saddress}}</td>
+        <td><input type="button" value="Delete" class="btn btn-danger" ng-click="del()"></td>
+      </tr>
+ 	</tbody>
+</table>
+
+
+<div class="mtab" ng-hide="byname+byid+byage+byaddress+byanything">
+<table class="table table-striped" >
+     </thead>
+      <tr>
+        <th>NAME</th>
+        <th>ID</th>
+        <th>AGE</th>
+        <th>ADDRESS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="x in students">
+        <td>{{x.sname}}</td>
+        <td>{{x.sid}}</td>
+        <td>{{x.sage}}</td>
+        <td>{{x.saddress}}</td>
+        <td><input type="button" value="Delete" class="btn btn-danger" ng-click="del($index)"></td>
+      </tr>
+ 	</tbody>
+</table>
+</div>
+
+<input type="button" value="Save another's" class="btn btn-warning" ng-click="back()">
+
+</div>
+</div>
