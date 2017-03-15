@@ -13,11 +13,27 @@ lapp.controller('viewcontroller', function($scope, userservice,$location,$locati
 	}
 
 	$scope.del=function(n){
-		console.log(n)
-		userservice.student[0].splice(0,4);
-				//$location.path('/list')
-				console.log('finish')
-				
+		//console.log(angular.toJson(userservice.student[n]))  userservice.student.push($scope.obj);
+		 userservice.student.splice(n, 1);
+	}
+	$scope.upd=function(n){
+		
+		console.log("-------------- > --- > ",n)
+			$scope.temp={};
+			console.warn("----------service object---- > --- > ",userservice.student[n])
+			userservice.newObj=userservice.student[n]
+
+
+console.warn("---------my -service object---- > --- > ",userservice.newObj)
+
+			/*
+			$scope.temp.id=userservice.student[n].sid;
+			$scope.temp.age=userservice.student[n].sage;
+			$scope.temp.address=userservice.student[n].saddress;
+			*/
+			
+			userservice.getindex(n);
+			$location.path('/register')
 
 	}
 

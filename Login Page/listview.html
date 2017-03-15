@@ -1,5 +1,6 @@
 <div class="container">
 <div class="well well-lg">
+
 <div class="col-xs-2">
 <input type="text" placeholder="Search By Name" class="form-control" ng-model="byname"></div>
  <div class="col-xs-2">
@@ -28,7 +29,6 @@
         <td>{{x.sid}}</td>
         <td>{{x.sage}}</td>
         <td>{{x.saddress}}</td>
-        <td><input type="button" value="Delete" class="btn btn-danger" ng-click="del($index)"></td>
       </tr>
  	</tbody>
 </table>
@@ -48,7 +48,6 @@
         <td>{{x.sid}}</td>
         <td>{{x.sage}}</td>
         <td>{{x.saddress}}</td>
-        <td><input type="button" value="Delete" class="btn btn-danger" ng-click="del()"></td>
       </tr>
  	</tbody>
 </table>
@@ -68,7 +67,6 @@
         <td>{{x.sid}}</td>
         <td>{{x.sage}}</td>
         <td>{{x.saddress}}</td>
-        <td><input type="button" value="Delete" class="btn btn-danger" ng-click="del()"></td>
       </tr>
  	</tbody>
 </table>
@@ -88,7 +86,7 @@
         <td>{{x.sid}}</td>
         <td>{{x.sage}}</td>
         <td>{{x.saddress}}</td>
-        <td><input type="button" value="Delete" class="btn btn-danger" ng-click="del()"></td>
+
       </tr>
  	</tbody>
 </table>
@@ -109,14 +107,14 @@
         <td>{{x.sid}}</td>
         <td>{{x.sage}}</td>
         <td>{{x.saddress}}</td>
-        <td><input type="button" value="Delete" class="btn btn-danger" ng-click="del()"></td>
+        
       </tr>
  	</tbody>
 </table>
 
 
 <div class="mtab" ng-hide="byname+byid+byage+byaddress+byanything">
-<table class="table table-striped" >
+<table class="table table-striped" border="0px">
      </thead>
       <tr>
         <th>NAME</th>
@@ -131,8 +129,10 @@
         <td>{{x.sid}}</td>
         <td>{{x.sage}}</td>
         <td>{{x.saddress}}</td>
-        <td><input type="button" value="Delete" class="btn btn-danger" ng-click="del($index)"></td>
-      </tr>
+        <td><input type="button" value="Delete" class="btn btn-danger" ng-click="del($index)">
+        <input type="button" value="Update" class="btn btn-warning" ng-click="upd($index)"></td>
+      
+       </tr>
  	</tbody>
 </table>
 </div>
