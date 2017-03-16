@@ -1,9 +1,16 @@
+<div ng-init="init()"></div>
+<div class="container">
+<div class="well well-lg">
+<p class="text-right">Hi, <b>{{name}}</b></p>
 
-<b>{{name}}</b> Logged in.
-<h3>STUDENT REGISTRATION FORM</h3><br>
-NAME:<input type="text" ng-model="af.sname"><br>
-ID:<input type="text" ng-model="af.sid"><br>
-AGE:<input type="text" ng-model="af.sage"><br>
-ADDRESS:<input type="text" ng-model="af.saddress"><br>
-<input type="button" value="save" ng-click="save()">
-<input type="button" value="clear" ng-click="clear()">
+<h3 class="text-center">STUDENT REGISTRATION FORM</h3><br>
+<p class="text-primary">NAME:<input type="text" class="form-control" ng-model="obj.sname"><br>
+ID:<input type="text" class="form-control" ng-model="obj.sid"><br>
+AGE:<input type="text" class="form-control" ng-model="obj.sage"><br>
+ADDRESS:<input type="text" class="form-control" ng-model="obj.saddress"><br></p>
+<input type="button" ng-hide="val" class="btn btn-success" value="save" ng-click="save()">
+<input type="button" ng-show="val" class="btn btn-info" value="update" ng-click="update()">
+<input type="button" class="btn btn-warning" value="clear" ng-click="clear()">
+<input type="button" class="btn btn-primary" value="Saved List" ng-click="viewlist()" >
+</div>
+</div>

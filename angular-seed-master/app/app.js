@@ -61,4 +61,6 @@ lapp.config(['$routeProvider', function($routeProvider) {
     templateUrl: 'Login page/listview.html',
     controller: 'viewcontroller'
   })
+  
+
 }]);
