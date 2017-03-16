@@ -24,7 +24,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="x in students | filter : byname" >
+      <tr ng-repeat="x in students | filter : byname track by $index" >
         <td>{{x.sname}}</td>
         <td>{{x.sid}}</td>
         <td>{{x.sage}}</td>
@@ -43,7 +43,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="x in students | filter : byid" >
+      <tr ng-repeat="x in students | filter : byid track by $index" >
         <td>{{x.sname}}</td>
         <td>{{x.sid}}</td>
         <td>{{x.sage}}</td>
@@ -62,7 +62,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="x in students | filter : byage">
+      <tr ng-repeat="x in students | filter : byage track by $index">
         <td>{{x.sname}}</td>
         <td>{{x.sid}}</td>
         <td>{{x.sage}}</td>
@@ -81,7 +81,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="x in students | filter : byaddress">
+      <tr ng-repeat="x in students | filter : byaddress track by $index">
         <td>{{x.sname}}</td>
         <td>{{x.sid}}</td>
         <td>{{x.sage}}</td>
@@ -102,7 +102,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="x in students | filter : byanything" >
+      <tr ng-repeat="x in students | filter : byanything track by $index" >
         <td>{{x.sname}}</td>
         <td>{{x.sid}}</td>
         <td>{{x.sage}}</td>
@@ -124,7 +124,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="x in students">
+      <tr ng-repeat="x in students track by $index">
         <td>{{x.sname}}</td>
         <td>{{x.sid}}</td>
         <td>{{x.sage}}</td>

@@ -1,18 +1,11 @@
 lapp.controller('savecontroller', function($scope, $location,userservice){
-
-
-//console.log(userservice.new[$scope.arrayindex]);
-
+var index=null;
 $scope.init = function () {
-	 
-	 console.log("in init function")
 
 	 if(!angular.equals(userservice.newObj,{})){
-
+	 	var index=userservice.putindex();
 	 	$scope.val="true";
-		console.log("inside if loop function")
 		$scope.obj = userservice.newObj;
-	 	console.warn("inside if loop function",angular.toJson($scope.obj));
 	 }
 }
 
@@ -23,6 +16,13 @@ $scope.name=userservice.getname();
 $scope.save=function(){
 		userservice.student.push($scope.obj);
 		$scope.obj={};	
+}
+$scope.update=function(){
+		//userservice.student.push($scope.obj);
+		userservice.student[index]=($scope.obj);
+		$scope.obj={};
+		$scope.val=null;
+		userservice.newObj={};
 }
 
 

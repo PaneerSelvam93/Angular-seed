@@ -6,7 +6,7 @@ $scope.pwdcheck=function(){
 		$location.path('/register')
 	}
 	else{
-		alert('Username or password is incorrect')
+		alert('Type username and password as same')
 	}
 }
 $scope.clear=function(){
